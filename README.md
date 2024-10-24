@@ -1,4 +1,4 @@
-# My Node TypeScript Project
+# Node TypeScript Starter
 
 This is a starter Node.js project with TypeScript and Express.
 
