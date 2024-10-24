@@ -5,7 +5,7 @@ This is a starter Node.js project with TypeScript and Express.
 ## Installation
 
 ```sh
-npm install
+yarn
 ```
 
 ## Running the Project
