@@ -9,8 +9,8 @@
   "author": "jleeapp",
   "license": "MIT",
   "description": "A simple Node.js starter project",
-   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {
+    "test": "jest"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
