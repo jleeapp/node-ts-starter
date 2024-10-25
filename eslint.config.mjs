@@ -17,9 +17,9 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
-    },
-    env: {
-      node: true, // Add this line to enable Node.js environment
+      globals: {
+        NodeJS: true,
+      },
     },
     plugins: {
       '@typescript-eslint': typescriptPlugin,
