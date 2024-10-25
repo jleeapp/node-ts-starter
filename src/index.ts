@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable unused-imports/no-unused-vars */
-/* eslint-disable no-unused-vars */
-
 import dotenv from 'dotenv';
 import express, { NextFunction, Request, Response } from 'express';
 import morgan from 'morgan';
@@ -21,6 +17,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // Error handling middleware
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-vars
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
