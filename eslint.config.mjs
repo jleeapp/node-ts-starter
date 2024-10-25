@@ -3,6 +3,7 @@ import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unusedImports from 'eslint-plugin-unused-imports';
+import jestPlugin from 'eslint-plugin-jest';
 
 export default [
   js.configs.recommended,
@@ -19,14 +20,16 @@ export default [
       },
       globals: {
         NodeJS: true,
-        process: 'readonly', // Define process as a global variable
-        console: 'readonly', // Define console as a global variable
+        process: 'readonly',
+        console: 'readonly',
+        'jest/globals': true,
       },
     },
     plugins: {
       '@typescript-eslint': typescriptPlugin,
       'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
+      jest: jestPlugin,
     },
     rules: {
       'no-unused-vars': 'off',
@@ -44,6 +47,15 @@ export default [
           argsIgnorePattern: '^_',
         },
       ],
+    },
+  },
+  {
+    files: ['**/*.test.ts', '**/*.test.tsx'],
+    plugins: {
+      jest: jestPlugin,
+    },
+    rules: {
+      ...jestPlugin.configs.recommended.rules,
     },
   },
 ];
