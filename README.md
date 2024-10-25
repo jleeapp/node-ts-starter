@@ -68,12 +68,6 @@ yarn postinstall
    yarn install
    ```
 
-2. Run the postinstall script to set up Husky:
-
-   ```sh
-   yarn postinstall
-   ```
-
 ## Development
 
 1. Start the development server:
