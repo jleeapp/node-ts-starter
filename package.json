@@ -1,22 +1,22 @@
 {
   "name": "nodejs-starter",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A simple Node.js starter project",
   "keywords": [
     "nodejs",
     "express"
   ],
-  "author": "jleeapp",
   "license": "MIT",
-  "description": "A simple Node.js starter project",
+  "author": "jleeapp",
+  "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
     "build": "tsc",
-    "lint": "eslint \"src/**/*.{ts,js}\"",
     "format": "prettier --write 'src/**/*.{ts,js,json}'",
+    "postinstall": "husky install",
+    "lint": "eslint \"src/**/*.{ts,js}\"",
+    "start": "ts-node src/index.ts",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "postinstall": "husky install"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
