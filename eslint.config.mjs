@@ -14,11 +14,13 @@ export default [
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 2020,
         sourceType: 'module',
       },
       globals: {
         NodeJS: true,
+        process: 'readonly', // Define process as a global variable
+        console: 'readonly', // Define console as a global variable
       },
     },
     plugins: {

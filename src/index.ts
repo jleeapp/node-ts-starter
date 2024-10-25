@@ -1,5 +1,5 @@
-import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
+import express, { NextFunction, Request, Response } from 'express';
 import morgan from 'morgan';
 
 // Load environment variables from .env file
