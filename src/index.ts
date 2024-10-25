@@ -17,7 +17,6 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // Error handling middleware
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-vars
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
