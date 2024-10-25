@@ -15,14 +15,13 @@ export default [
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 'latest',
         sourceType: 'module',
       },
       globals: {
         NodeJS: true,
         process: 'readonly',
         console: 'readonly',
-        'jest/globals': true,
       },
     },
     plugins: {
@@ -51,11 +50,23 @@ export default [
   },
   {
     files: ['**/*.test.ts', '**/*.test.tsx'],
+    languageOptions: {
+      globals: {
+        jest: true,
+        describe: true,
+        it: true,
+        expect: true,
+      },
+    },
     plugins: {
       jest: jestPlugin,
     },
     rules: {
-      ...jestPlugin.configs.recommended.rules,
+      'jest/no-disabled-tests': 'warn',
+      'jest/no-focused-tests': 'error',
+      'jest/no-identical-title': 'error',
+      'jest/prefer-to-have-length': 'warn',
+      'jest/valid-expect': 'error',
     },
   },
 ];
