@@ -22,6 +22,8 @@ export default [
         NodeJS: true,
         process: 'readonly',
         console: 'readonly',
+        setInterval: 'readonly', // Add setInterval to globals
+        clearInterval: 'readonly', // Add clearInterval to globals
       },
     },
     plugins: {
