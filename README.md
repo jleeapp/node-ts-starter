@@ -4,61 +4,13 @@ This is a simple Node.js starter project using TypeScript, Express, and various 
 
 ## Scripts
 
-### `yarn start`
-
-Starts the server using `ts-node`.
-
-```sh
-yarn start
-```
-
-### `yarn build`
-
-Compiles TypeScript to JavaScript using `tsc`.
-
-```sh
-yarn build
-```
-
-### `yarn lint`
-
-Lints the code using ESLint.
-
-```sh
-yarn lint
-```
-
-### `yarn format`
-
-Formats the code using Prettier.
-
-```sh
-yarn format
-```
-
-### `yarn test`
-
-Runs tests using Jest.
-
-```sh
-yarn test
-```
-
-### `yarn test:watch`
-
-Runs tests in watch mode using Jest.
-
-```sh
-yarn test:watch
-```
-
-### `yarn postinstall`
-
-Installs Husky for Git hooks.
-
-```sh
-yarn postinstall
-```
+- **`yarn start`**: Starts the server using `ts-node`.
+- **`yarn build`**: Compiles TypeScript to JavaScript using `tsc`.
+- **`yarn lint`**: Lints the code using ESLint.
+- **`yarn format`**: Formats the code using Prettier.
+- **`yarn test`**: Runs tests using Jest.
+- **`yarn test:watch`**: Runs tests in watch mode using Jest.
+- **`yarn postinstall`**: Installs Husky for Git hooks.
 
 ## Setup
 
