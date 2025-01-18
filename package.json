@@ -1,19 +1,20 @@
 {
   "name": "nodejs-starter",
   "version": "1.0.0",
-  "description": "A simple Node.js starter project",
+  "description": "A Node.js starter project",
   "keywords": [
     "nodejs",
     "express"
   ],
   "license": "MIT",
   "author": "jleeapp",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node clean-dist.mjs && tsc",
     "format": "prettier --write 'src/**/*.{ts,js,json}'",
     "lint": "eslint \"src/**/*.{ts,js}\"",
-    "start": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -42,6 +43,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.1.4",
     "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
     "prettier": "^3.3.3",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",

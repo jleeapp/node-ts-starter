@@ -8,7 +8,7 @@ import jestPlugin from 'eslint-plugin-jest';
 export default [
   js.configs.recommended,
   {
-    ignores: ['eslint.config.mjs', 'jest.config.js', 'prettier.config.js'],
+    ignores: ['eslint.config.mjs', 'jest.config.js', 'prettier.config.js', 'clean-dist.mjs'],
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
